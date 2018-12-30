@@ -19,7 +19,7 @@ public class RoomController {
         this.roomServices = roomServices;
     }
 
-    @GetMapping("/list")
+    @GetMapping
     public String getAllRooms(Model model) {
         model.addAttribute("rooms", this.roomServices.getAllRooms());
         return "rooms";
