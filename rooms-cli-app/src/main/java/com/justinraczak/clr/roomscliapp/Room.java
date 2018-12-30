@@ -1,20 +1,10 @@
-package com.justinraczak.rooms.roomswebapp;//  Created by Justin on 12/29/18
+package com.justinraczak.rooms.roomswebapp;
+//  Created by Justin on 12/29/18
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "ROOM")
 public class Room {
-
-    @Id
-    @Column(name = "ROOM_ID")
-    @GeneratedValue
     private long id;
-    @Column(name = "NAME")
     private String name;
-    @Column(name = "ROOM_NUMBER")
     private String number;
-    @Column(name = "BED_INFO")
     private String info;
 
     public Room() {
@@ -57,5 +47,16 @@ public class Room {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        final java.lang.StringBuilder sb = new java.lang.StringBuilder("Room{");
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", number='").append(number).append('\'');
+        sb.append(", info='").append(info).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }
