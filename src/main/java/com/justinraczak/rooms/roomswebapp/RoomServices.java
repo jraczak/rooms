@@ -23,4 +23,14 @@ public class RoomServices {
         this.roomRepository.findAll().forEach(rooms::add);
         return rooms;
     }
+
+    public Room saveRoom(Room room) {
+        roomRepository.save(room);
+        return room;
+    }
+
+    //TODO: Handle room-not-found error
+    public Room findRoomById(Long id) {
+        return roomRepository.findRoomById(id);
+    }
 }
